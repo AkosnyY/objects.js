@@ -3,15 +3,19 @@
 // Exercice 1 : Création et manipulation d'objets
 
 //     Etape 1 : Créer un objet "voiture" avec les propriétés "marque", "modèle" et "année"
-
-let voiture = {
-    marque: "MERCEDES",
-    modele: "CLASSE B ",
-    annee: "2022",
-
-    //     Etape 2 : Ajouter une méthode "conduire" à l'objet "voiture" qui affiche un message "La voiture de marque [marque] modèle [modèle] de l'année [année] roule sur la route."
-    conduire: function () {
-        console.log("La voiture de marque " + this.marque + " modèle " + this.modele + " de l'année " + this.annee + " roule sur la route.");
+//     // Etape 2 : Ajouter une méthode "conduire" à l'objet "voiture" qui affiche un message "La voiture de marque [marque] modèle [modèle] de l'année [année] roule sur la route."
+//     this.conduire = () => {
+//         console.log(`La voiture de marque ${this.marque} modèle ${this.modele} de l'année ${this.annee} roule sur la route.`);
+//     }
+// }
+class Voiture {
+    constructor(marque, modele, annee) {
+        this.marque = marque;
+        this.modele = modele;
+        this.annee = annee;
+    }
+    conduire = () => {
+        console.log(`La voiture de marque ${this.marque} modèle ${this.modele} de l'année ${this.annee} roule sur la route.`);
     }
 }
 
